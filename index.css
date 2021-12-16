@@ -1,0 +1,102 @@
+:root {
+  --wine-red: #c7375f;
+  --bright-red: #d42d2f;
+  --dark-green: #344d2f;
+  --light-green: #77a047;
+  --gold: #fac57d;
+  --snow: #f0f4f7;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--snow);
+    height: 100vh;
+    background: repeating-linear-gradient(
+      45deg,
+      #77a047,
+      #77a047 50px,
+      #c7375f 50px,
+      #c7375f 100px
+  );
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--light-green);
+  padding: 70px;
+  margin: 75px 45px;
+  border-radius: 15px;
+}
+
+.checklist {
+    color: var(--dark-green);
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    flex-direction: column;
+    min-width: 250px;
+    min-height: 150px;
+    max-width: 5ch;
+    background: var(--snow);
+    padding: 1em 2em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.checklist-item {
+    margin: 0.5em;
+    width: 100%;
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+li {
+  list-style-type: none;
+}
+
+input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+  font-weight: normal;
+}
+
+.add-item-input {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 15px;
+
+}
+
+button {
+  border-radius: 10px;
+  color: #F0F4F7;
+}
+
+.add-item, .delete-item {
+  padding: 15px 30px;
+  background-color: #C7375F;
+  margin: 10px;
+}
+
+.delete-item {
+  background-color: #344D2F;
+}
